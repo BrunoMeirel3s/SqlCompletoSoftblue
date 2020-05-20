@@ -18,7 +18,7 @@ set SQL_SAFE_UPDATES = 0;
 /*set SQL_SAFE_UPDATES = 1;*/
 
 update funcionarios set salario = salario * 1.1;
-update funcionarios set salario = round(salario * 1.1, 2);
+update funcionarios set salario = round(salario * 1.1, 2); /*Round arrendonda os valores*/
 
 select * from funcionarios;
  
@@ -39,6 +39,9 @@ select * from funcionarios f where f.salario > 2000;
 
 select nome as 'Funcionário', salario from funcionarios f where f.salario > 2000;
 
+/*
+Union pode ser usado para unir um ou mais consultas
+*/
 select * from funcionarios where nome = 'Bruno'
 union
 select * from  funcionarios where id = 2;
